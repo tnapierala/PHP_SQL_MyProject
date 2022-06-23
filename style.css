@@ -1,0 +1,833 @@
+* { margin: 0; padding: 0; }
+
+html { width: 100%; height: 100%; font-size: 62.5% }
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    font: 1.2em Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* ==================== Form style sheet ==================== */
+.logH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    height: 100px;
+    box-shadow: 0 0 10px #444;
+}
+.logH1 {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    width: 91%;
+}
+.logH2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 9%;
+    height: 100px;
+    text-decoration: none;
+    color: #fff;
+}
+.logH2:hover { background-color: #111;}
+.logH2:hover:active { background-color: white; color:black; }
+
+.divForm {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 120px;
+}
+
+.errMsg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px 10px;
+    text-align: left;
+    margin-top: 20px;
+    color: red;
+    font: 1.6em Verdana, Arial, Helvetica, sans-serif;
+}
+
+.passInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px 10px;
+    text-align: left;
+    color: #4CAF50;
+    font: 1.6em Verdana, Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* ================================= Logowanie =====================================*/
+.form {
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #888;
+    border-radius: 25px;
+    background-color: #444;
+    box-shadow: 0 0 10px #444;
+    font: 1.3em Verdana bold, Arial, Helvetica, sans-serif;
+    width: 650px;
+}
+
+.formCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.formTR {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.formTR > div {
+    display: flex;
+    padding: 14px 16px 8px;
+    text-align: left;
+    font: 1.3em Verdana bold, Arial, Helvetica, sans-serif;
+    color: #fff;
+    align-items: center;
+    align-content: center;
+}
+
+.fromTH {
+    width: 40%;
+    height: 32px;
+}
+.fromTH label {
+    margin-left: 8px;
+}
+.fromTD {
+    width: 60%;
+    justify-content: center;
+}
+
+input.inp-text {
+    border: 1px solid #909090;
+    border-radius: 8px;
+    padding: 7px;
+    width: 300px;
+}
+.btnLogin {
+    width: 98%;
+    padding-bottom: 1%;
+}
+.submit-button-right {
+    align-content: end;
+    justify-content: end;
+}
+
+input.inp-text {
+    background-color: #888;
+    color: #fff;
+}
+
+/* ==================== Form style sheet END ==================== */
+
+.send_btn {
+    background: none repeat scroll 0 0 #0D92E1;
+    border-radius: 8px;
+    border: 1px solid #777;
+    color: #FFF;
+    cursor: pointer;
+    font: bold 15px Arial,Helvetica,sans-serif;
+    height: 35px;
+    width: 100px !important;
+	padding: 5px 15px 5px 15px;
+    margin: 5px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ==================== Style sheet Logged ==================== */
+.flexRow {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexRow.c {
+    background-color: #444;
+}
+
+.flexRow2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.ul {
+    display: flex;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    align-items: center;
+}
+
+.ul, .li {float: left;}
+
+.li a {
+    padding: 18px 20px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+.li.right a { font-weight: bold;}
+
+.li a:hover:not(.active1)  { background-color: #111;}
+
+.active1 {background-color: #04AA6D;}
+
+.li a:hover:active { background-color: white; color:black; }
+
+.right {
+    display: flex;
+    flex:100%;
+    justify-content: flex-end;
+}
+
+.center {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-weight: bold
+}
+
+.right-edit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ul.edit {
+    display: flex;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    align-items: center;
+    font-weight: bold;
+}
+.li.left-edit {
+    display: flex;
+    flex: 100%;
+    justify-content: center;
+}
+
+.li.left-edit a {
+    font-size: 22px;
+}
+.li.right-edit a {
+    padding: 22px 20px;
+}
+
+#LoggedH2 {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #0D92E1;
+}
+
+#LoggedH2-nu {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: #e67100;
+    width: 20%;
+}
+
+#LoggedH3 {
+    text-align: center;
+    font-size: 18px;
+    background-color: #444;
+    color: #4CAF50;
+    padding: 10px;
+}
+
+pre {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+/* ====================== StyleSheet To Table ========================= */
+.sec {
+    display: none;
+}
+
+.tablePre {
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.qT{
+    border-collapse: collapse;
+    text-align: center;
+    white-space: normal;
+}
+
+.qTh {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #04AA6D;
+    color: #fff;
+    height: 55px;
+    padding: 10px;
+}
+
+.qTd {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.qTr:nth-child(even) {background-color: #ddd;}
+.qTr:hover {background-color: #808080; color: white;}
+
+.pass {
+    padding: 0 10px 0 10px;
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.qTh.btnAdd{
+    background-color: #038857;
+    padding: 0;
+    height: 75px;
+    width: 120px;
+}
+
+.qTh.btnAdd a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    height: 100%;
+}
+
+.far.i-btnAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #55B2EA;
+    width: 100%;
+    height: 100%;
+}
+
+
+.qTh.btnAdd a i:hover { background-color: #111; color: white;}
+.qTh.btnAdd a i:hover:active { background-color: white; color:black; }
+
+.btnDE {
+    display: flex;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.trashBtn, .editBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    white-space: normal;
+    text-decoration: none;
+}
+
+a.trashBtn i { color:#0D92E1; }
+a.editBtn i { color:#0D92E1; }
+a.trashBtn i:hover  { color: #111;}
+a.editBtn i:hover  { color: #111;}
+a.trashBtn i:hover:active { color: red; }
+a.editBtn i:hover:active { color: lawngreen; }
+
+i {
+    font-size: 25px
+}
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 15px 15px;
+    margin-top: 30px;
+    margin-bottom: 3px;
+    background-color: #444;
+    color: #fff;
+    font: 1.6em Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+/* ======================= Style sheet Profile ==========================  */
+
+.bgcProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgProfile img{
+    width: 250px;
+}
+
+.imgInpProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+    margin-top: 40px;
+    width: 30%;
+}
+
+.imgProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid #777;
+}
+
+.imgProfile > form {
+    margin-top: 3%;
+}
+
+.inputProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.inputProfile > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.textFile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    font: bold 20px Arial,Helvetica,sans-serif;
+}
+
+.choseFileRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cuBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    padding: 3%;
+    background-color: #0D92E1;
+    border-radius: 8px;
+    border: 1px solid #777;
+    color: #FFF;
+    cursor: pointer;
+    font: bold 15px Arial,Helvetica,sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.choseFile_btn_none {
+    display: none;
+}
+
+.choseFile_btn {
+    width: 30%;
+}
+
+.file-chosen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font: bold 15px Arial,Helvetica,sans-serif;
+}
+
+.uploadImg_btn {
+    width: 40%;
+}
+
+.formProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+}
+.divForm.Profile{
+    margin-top: 50px;
+}
+
+
+/* ==================== Style sheet SIZE SITE ==================== */
+@media screen and (max-width: 1700px) {
+    /* ==================== Nagłówek logowania ==================== */
+    .logH{
+        height: 90px;
+    }
+    .logH1 {
+        font-size: 32px;
+        width: 90%;
+    }
+    .logH2 {
+        font-size: 14px;
+        width: 10%;
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    /* ==================== Nagłówek logowania ==================== */
+    .logH {
+        height: 80px;
+    }
+    .logH1 {
+        font-size: 28px;
+        width: 86%;
+    }
+    .logH2 {
+        font-size: 12px;
+        width: 14%;
+        height: 80px;
+    }
+
+    /* ================================= Logowanie =====================================*/
+    .form {
+        width: 550px;
+    }
+    .formTR > div {
+        padding: 12px 14px 6px;
+        font: 1.1em Verdana bold, Arial, Helvetica, sans-serif;
+    }
+    .fromTH label {
+        margin-left: 10px;
+    }
+    input.inp-text {
+        width: 250px;
+    }
+    .pass {
+        white-space: nowrap;
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .imgProfile img{
+        width: 250px;
+    }
+    .choseFile_btn {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 942px) {
+    /* ==================== Nagłówek logowania ==================== */
+    .logH{
+        height: 70px;
+    }
+    .logH1 {
+        font-size: 24px;
+        width: 88%;
+    }
+    .logH2 {
+        font-size: 12px;
+        width: 16%;
+        height: 70px;
+    }
+
+    /* ================================= Logowanie =====================================*/
+    .form {
+        width: 450px;
+    }
+    .formTR > div {
+        padding: 12px 14px 6px;
+        font: 1.1em Verdana bold, Arial, Helvetica, sans-serif;
+    }
+    .fromTH label {
+        margin-left: 10px;
+    }
+    input.inp-text {
+        width: 250px;
+    }
+
+    /* ======================= Zalogowano ======================== */
+    .li a {
+        padding: 14px 16px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #LoggedH2 {
+        font-size: 24px;
+    }
+
+    #LoggedH2-nu {
+        font-size: 18px;
+        width: 30%;
+    }
+
+    #LoggedH3 {
+        font-size: 14px;
+    }
+
+    /* ====================== StyleSheet To Table ========================= */
+    .fst{
+        display: none;
+    }
+    .sec {
+        display: flex;
+        width: 100%;
+    }
+    pre {
+        width: 450px;
+    }
+    .qT {
+        display: flex;
+        width: 100%;
+    }
+    .qT tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .qTr {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .qTh {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        font-size: 20px;
+    }
+    .qTd {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20px;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .qTr:nth-child(even) {background-color: white;}
+    .qTr:hover {background-color: white; color: black;}
+    .qTd:nth-child(even) {background-color: #ddd;}
+    .qTd:hover {background-color: #808080; color: white;}
+
+    .pass {
+        width: 300px;
+    }
+
+    .qTh.btnAdd{
+        height: 40px;
+        width: 100%;
+    }
+
+    .qTh.btnAdd a {
+        width: 100%;
+    }
+
+    .far.i-btnAdd{
+        font-size: 25px;
+    }
+
+    .btnDE {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px dashed black;
+    }
+
+    i {
+        font-size: 20px
+    }
+
+    .bgcProfile {
+        flex-direction: column;
+    }
+    .imgInpProfile {
+        margin-right: 0;
+        margin-top: 50px;
+        width: 60%;
+    }
+    .imgProfile {
+         width: 200px;
+         height: 200px;
+         margin-right: 0;
+    }
+    .imgProfile img{
+          width: 200px;
+    }
+    .textFile {
+        font-size: 15px;
+    }
+    .choseFileRow {
+        width: 80%;
+    }
+    .cuBtn {
+        padding: 2%;
+    }
+    .choseFile_btn {
+        height: 33px;
+        padding: 0;
+    }
+    .file-chosen {
+        font-size: 12px;
+    }
+    .uploadImg_btn {
+        height: 35px;
+        width: 40%;
+    }
+    .formProfile {
+        margin-left: 0;
+    }
+    .formProfile {
+        margin-left: 0;
+    }
+    .divForm.Profile{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /* ==================== Nagłówek logowania ==================== */
+    .logH{
+        height: 70px;
+    }
+    .logH1 {
+        font-size: 20px;
+        width: 80%;
+    }
+    .logH2 {
+        font-size: 12px;
+        width: 20%;
+        height: 70px;
+    }
+
+    /* ================================= Logowanie =====================================*/
+
+    .form {
+        width: 320px;
+    }
+    .formTR {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .formTR.btnLogin {
+        justify-content: center;
+    }
+    .fromTD, .fromTH {
+        width: 100%;
+    }
+    .formTR > div {
+        padding: 12px 14px 6px;
+        font: 1.1em Verdana bold, Arial, Helvetica, sans-serif;
+    }
+    .fromTH label {
+        margin-left: 10px;
+    }
+    .fromTH {
+         width: 40%;
+         height: auto;
+    }
+    input.inp-text {
+        width: 200px;
+    }
+    .btn {
+        width: 100%;
+    }
+
+    /* ======================= Zalogowano ======================== */
+    .flexRow2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ul {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .li a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #LoggedH2 {
+        font-size: 18px;
+    }
+
+    #LoggedH2-nu {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    #LoggedH3 {
+        font-size: 12px;
+    }
+    /* ====================== StyleSheet To Table ========================= */
+    .pass {
+        width: 200px;
+    }
+    .qT {
+        justify-content: center;
+        width: 80%;
+    }
+    .qT tbody {
+        justify-content: center;
+        width: 80%;
+    }
+}
